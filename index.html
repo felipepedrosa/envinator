@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envinator</title>
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+    class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-gray-700 text-white p-6">
+    <div class="bg-gray-800 shadow-lg rounded-xl p-6 max-w-lg w-full text-center">
+        <h1 class="text-3xl font-bold mb-4 text-blue-400">Envinator</h1>
+        <p class="text-lg text-gray-300 mb-6">Transforme qualquer texto em uma variável de ambiente válida!</p>
+        <input id="input" type="text" placeholder="Digite o valor..."
+            class="w-full p-3 border border-gray-600 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button onclick="transformEnvVariable()"
+            class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-all">
+            Transformar
+        </button>
+        <div class="mt-4 flex items-center justify-center gap-2">
+            <p id="output" class="text-xl font-semibold text-blue-300"></p>
+            <button id="copyButton" onclick="copyToClipboard()"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded transition-all"
+                style="display: none;">
+                📋
+            </button>
+        </div>
+    </div>
+
+    <!-- Call to Action (CTA) -->
+    <div class="mt-8 text-center">
+        <p class="text-lg font-semibold text-gray-300">Gostou do Envinator? Compartilhe com seus amigos!</p>
+        <button onclick="sharePage()"
+            class="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition-all">
+            Compartilhar
+        </button>
+    </div>
+</body>
+
+</html>
